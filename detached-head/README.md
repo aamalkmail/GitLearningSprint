@@ -16,7 +16,24 @@ Note that this task might seem more confusing if you did not run `setup.sh` in y
 We want to have a branch called `the-beginning` that is made from the first commit with message `A`. 
 
 3. Can you do this by first causing a detached head?
+   
+```
+// Find the hash of the first commit with the message "A"
+git log --oneline
 
+// Check out the specific commit using its hash
+git checkout a9b1270
+
+// Create a new branch called 'the-beginning' starting from the currently checked out commit
+git checkout -b the-beginning
+
+// View the commit history for the new branch
+git log –oneline
+
+// Check out the 'master' branch
+git checkout master
+
+```
 ## Useful commands
 
 - `git status`
